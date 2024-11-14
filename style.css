@@ -1,0 +1,265 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 1350px;
+  margin: auto;
+}
+
+header,
+.logo {
+  display: flex;
+  padding: 5px 15px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2f4858;
+  color: white;
+  position: relative;
+}
+
+nav ul li {
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px;
+  justify-items: right;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: #f9f871;
+  border-bottom: 3px solid #f9f871;
+}
+
+.not,
+.not2 {
+  background-color: #f9f871;
+  color: black;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 18px;
+  /* position: sticky; */
+  top: 0;
+  z-index: 100;
+}
+
+span {
+  color: #f9f871;
+}
+
+/* Aqui começa a seção principal  */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.container div img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.container div {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 2px;
+  text-align: center;
+  align-items: end;
+  justify-content: center;
+  transition: 0.4s;
+
+  padding: 10px;
+  width: 300px;
+}
+
+.container div:hover {
+  transform: scale(1.03);
+  background-image: rbga(0, 0, 0, 0.7);
+}
+
+.container a:hover {
+  transform: scale(1.03);
+  background-image: rbga(0, 0, 0, 0.7);
+}
+
+.container div h4 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 20px;
+  padding: 0 15px;
+  margin: 10px;
+}
+/* Aqui começa minha seção de doaçao */
+
+.cachorro,
+.produtos {
+  position: relative;
+  text-align: center;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.dog {
+  width: 28%;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.dog h3 {
+  font-size: 22px;
+  color: #333;
+  margin: 15px 0;
+}
+
+.dog p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 50px;
+  text-align: justify;
+}
+
+.dog img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.doacoes,
+footer {
+  background-color: #2f4858;
+  color: white;
+  padding: 40px 42px;
+  text-align: center;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.taga {
+  background-color: #f9f871;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 11px 19px;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  text-align: center;
+}
+
+/* ============= Quem Somos ============= */
+
+.quemsomos h2 {
+  text-align: center;
+  font-size: 25px;
+  margin: 15px;
+  font-weight: bold;
+}
+
+.quemsomos p {
+  text-align: justify;
+  font-size: 18px;
+  margin: 15px;
+}
+
+.contato {
+  margin: 15px;
+}
+
+.telefone,
+.whats,
+.insta {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.telefone i,
+.whats i,
+.insta i {
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.diversao{
+  background-color: #2f4858;
+  color: white;
+  padding: 40px 42px;
+  text-align: center;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.btn-menu-mobile{
+  display: none;
+}
+
+@media (max-width: 900px) {
+  body {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 840px) {
+  #nav-links,
+  .btn-menu {
+    display: none;
+    }
+
+  .btn-menu-mobile {
+    display: flex;
+  }
+
+  #nav-links-mobile {
+    display: none; /* Esconde o menu por padrão */
+  }
+
+  #nav-links-mobile.open {
+    display: block;
+  }
+
+  .nav-menu {
+    background-color: #2f4858;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu a {
+    color: var(--branco);
+  }
+
+  #nav-links-mobile ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 150px;
+    background-color: #2f4858;
+    width: 100%;
+    z-index: 2;
+  }
+}
